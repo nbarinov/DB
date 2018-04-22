@@ -1,10 +1,10 @@
-package DAO;
+package dao;
 
-import Beans.RepaisBean;
+import beans.RepairsBean;
 
 import java.util.ArrayList;
 
-public interface RepaisDAO {
+public interface RepairsDAO {
 
-    ArrayList<RepaisBean> getAll();
+    ArrayList<RepairsBean> getAll();
 }
