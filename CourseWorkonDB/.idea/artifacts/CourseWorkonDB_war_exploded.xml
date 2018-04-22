@@ -6,8 +6,10 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="CourseWorkonDB" />
+          <element id="module-output" name="CourseWork-on-DB" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="CourseWork-on-DB/web/Web" />
     </root>
   </artifact>
 </component>
