@@ -18,11 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CourseWork-on-DB.iml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CourseWork-on-DB.iml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CourseWork-on-DB.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+            <state relative-caret-position="324">
+              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" selection-start-column="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -58,6 +67,7 @@
         <option value="$PROJECT_DIR$/src/main/java/Beans/BusJourneysBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/Beans/BusesBean.java" />
         <option value="$PROJECT_DIR$/CourseWork-on-DB.iml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -93,48 +103,6 @@
             <path>
               <item name="CourseWorkonDB" type="b2602c69:ProjectViewProjectNode" />
               <item name="CourseWorkonDB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CourseWorkonDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CourseWorkonDB" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CourseWorkonDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CourseWorkonDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CourseWorkonDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CourseWorkonDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CourseWorkonDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CourseWorkonDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CourseWorkonDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CourseWorkonDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Beans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CourseWorkonDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CourseWorkonDB" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CourseWorkonDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CourseWorkonDB" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CourseWorkonDB" type="b2602c69:ProjectViewProjectNode" />
@@ -419,12 +387,12 @@
       <workItem from="1524401555345" duration="227000" />
       <workItem from="1524400025094" duration="1822000" />
       <workItem from="1524401911536" duration="4000" />
-      <workItem from="1524401944183" duration="798000" />
+      <workItem from="1524401944183" duration="1234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2851000" />
+    <option name="totallyTimeSpent" value="3287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="327" y="189" width="1414" height="788" extended-state="0" />
@@ -709,8 +677,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CourseWork-on-DB.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        <state relative-caret-position="324">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
