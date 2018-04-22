@@ -1,5 +1,7 @@
 package Beans;
 
+import java.sql.Date;
+
 public class BillsBean {
     /**
      * Номер билета
@@ -11,11 +13,15 @@ public class BillsBean {
      * purchase_date
      * ДАТА ПОКУПКИ
      */
-
+    private Date purchaseDate;
     /**
      * Сумма заказа
      */
     private short costNumeric;
+    /**
+     * ID заказа
+     */
+    private int orderID;
 
     public int getBillID() {
         return billID;
@@ -25,15 +31,13 @@ public class BillsBean {
         this.billID = billID;
     }
 
-    /**
-     * purchase_date
-     *
-     */
+    public Date getPurchaseDate() {
+        return purchaseDate;
+    }
 
-    /**
-     * ID заказа
-     */
-    private int orderID;
+    public void setPurchaseDate(Date purchaseDate) {
+        this.purchaseDate = purchaseDate;
+    }
 
     public short getCostNumeric() {
         return costNumeric;
