@@ -3,7 +3,7 @@ CREATE TABLE timetables(
   route_id int NOT NULL,
   departure time,
   arrival time,
-  travell_time interval,
+  travell_time time,
   period VARCHAR(10)
 );
 

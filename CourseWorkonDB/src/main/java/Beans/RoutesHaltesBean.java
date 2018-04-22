@@ -4,25 +4,25 @@ public class RoutesHaltesBean {
     /**
      * ID маршрута
      */
-    private short routeID;
+    private int routeID;
     /**
      * ID остановки
      */
-    private short haltID;
+    private int haltID;
 
-    public short getRouteID() {
+    public int getRouteID() {
         return routeID;
     }
 
-    public void setRouteID(short routeID) {
+    public void setRouteID(int routeID) {
         this.routeID = routeID;
     }
 
-    public short getHaltID() {
+    public int getHaltID() {
         return haltID;
     }
 
-    public void setHaltID(short haltID) {
+    public void setHaltID(int haltID) {
         this.haltID = haltID;
     }
 }

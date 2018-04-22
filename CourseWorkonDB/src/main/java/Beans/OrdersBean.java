@@ -18,7 +18,7 @@ public class OrdersBean {
     /**
      * Сумма заказа
      */
-    private short costNumeric;
+    private double cost;
 
     public int getOrderID() {
         return orderID;
@@ -44,11 +44,11 @@ public class OrdersBean {
         this.orderDate = orderDate;
     }
 
-    public short getCostNumeric() {
-        return costNumeric;
+    public double getCost() {
+        return cost;
     }
 
-    public void setCostNumeric(short costNumeric) {
-        this.costNumeric = costNumeric;
+    public void setCost(double cost) {
+        this.cost = cost;
     }
 }
