@@ -1,7 +1,7 @@
 package Beans;
 
 import java.sql.Date;
-import java.time.LocalTime;
+import java.sql.Time;
 
 public class WaybillsBean {
     /**
@@ -27,11 +27,11 @@ public class WaybillsBean {
     /**
      * Время отбытия
      */
-    private LocalTime departureTime;
+    private Time departureTime;
     /**
      * Время прибытия
      */
-    private LocalTime arrivalTime;
+    private Time arrivalTime;
     /**
      * Дата мед осмотра
      */
@@ -73,19 +73,19 @@ public class WaybillsBean {
         this.workerID = workerID;
     }
 
-    public LocalTime getDepartureTime() {
+    public Time getDepartureTime() {
         return departureTime;
     }
 
-    public void setDepartureTime(LocalTime departureTime) {
+    public void setDepartureTime(Time departureTime) {
         this.departureTime = departureTime;
     }
 
-    public LocalTime getArrivalTime() {
+    public Time getArrivalTime() {
         return arrivalTime;
     }
 
-    public void setArrivalTime(LocalTime arrivalTime) {
+    public void setArrivalTime(Time arrivalTime) {
         this.arrivalTime = arrivalTime;
     }
 
