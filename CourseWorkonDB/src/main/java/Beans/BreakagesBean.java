@@ -43,4 +43,12 @@ public class BreakagesBean {
     public void setBreakType(String breakType) {
         this.breakType = breakType;
     }
+
+    public int getBusID() {
+        return busID;
+    }
+
+    public void setBusID(int busID) {
+        this.busID = busID;
+    }
 }
