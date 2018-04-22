@@ -1,5 +1,7 @@
 package Beans;
 
+import java.time.LocalTime;
+
 public class TimetablesBean {
     /**
      * ID расписания
@@ -10,13 +12,17 @@ public class TimetablesBean {
      */
     private int routeID;
     /**
-     * ! ! ! А Х Т У Н Г ! ! !
-     *         departure time,
-     *         arrival time,
-     *         travell_time interval
-     * ! ! ! А Х Т У Н Г ! ! !
+     * Время отбытия
      */
-
+    private LocalTime departureTime;
+    /**
+     * Время прибытия
+     */
+    private LocalTime arrivalTime;
+    /**
+     * Время в пути
+     */
+    private LocalTime travellTime;
     /**
      * Периодичность
      */
@@ -38,13 +44,29 @@ public class TimetablesBean {
         this.routeID = routeID;
     }
 
-    /**
-     * ! ! ! А Х Т У Н Г ! ! !
-     *         departure time,
-     *         arrival time,
-     *         travell_time interval
-     * ! ! ! А Х Т У Н Г ! ! !
-     */
+    public LocalTime getDepartureTime() {
+        return departureTime;
+    }
+
+    public void setDepartureTime(LocalTime departureTime) {
+        this.departureTime = departureTime;
+    }
+
+    public LocalTime getArrivalTime() {
+        return arrivalTime;
+    }
+
+    public void setArrivalTime(LocalTime arrivalTime) {
+        this.arrivalTime = arrivalTime;
+    }
+
+    public LocalTime getTravellTime() {
+        return travellTime;
+    }
+
+    public void setTravellTime(LocalTime travellTime) {
+        this.travellTime = travellTime;
+    }
 
     public String getPeriod() {
         return period;

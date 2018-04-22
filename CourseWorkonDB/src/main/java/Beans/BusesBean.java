@@ -1,7 +1,6 @@
 package Beans;
 
-
-import java.time.LocalTime;
+import java.sql.Date;
 
 public class BusesBean {
     /**
@@ -17,11 +16,9 @@ public class BusesBean {
      */
     private short run;
     /**
-     * ВНИМАНИЕ!!!!
      * Дата технического обслуживания автобуса
-     * ВНИМАНИЕ!!! ВОЗМОЖНО ПОТРЕБУЕТСЯ ИЗМЕНИТЬ ТИП ДАННЫХ!!!
      */
-    private LocalTime tecService;
+    private Date tecService;
     /**
      * Марка автобуса
      */
@@ -55,11 +52,11 @@ public class BusesBean {
         this.run = run;
     }
 
-    public LocalTime getTecService() {
+    public Date getTecService() {
         return tecService;
     }
 
-    public void setTecService(LocalTime tecService) {
+    public void setTecService(Date tecService) {
         this.tecService = tecService;
     }
 

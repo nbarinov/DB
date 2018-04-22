@@ -1,5 +1,7 @@
 package Beans;
 
+import java.sql.Date;
+
 public class RepaisBean {
     /**
      * ID ремонта
@@ -10,13 +12,13 @@ public class RepaisBean {
      */
     private int breakageID;
     /**
-     * Д А Т А   Н А Ч А Л А  Р Е М О Н Т А  А Х Т У Н Г ! ! !
-     * ДОПИСАТЬ
-     * !!!start_date!!!
-     * и также
-     * !!!end_date!!!
+     * Дата начала ремонта
      */
-
+    private Date startDate;
+    /**
+     * Дата окончания ремонта
+     */
+    private Date endDate;
     /**
      * Имя мастера
      */
@@ -50,13 +52,21 @@ public class RepaisBean {
         this.breakageID = breakageID;
     }
 
-    /**
-     * Д А Т А   Н А Ч А Л А  Р Е М О Н Т А  А Х Т У Н Г ! ! !
-     * ДОПИСАТЬ
-     * !!!start_date!!!
-     * и также
-     * !!!end_date!!!
-     */
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
 
     public String getRepName() {
         return repName;

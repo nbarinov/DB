@@ -1,5 +1,7 @@
 package Beans;
 
+import java.sql.Date;
+
 public class OrdersBean {
     /**
      * ID заказов
@@ -10,11 +12,9 @@ public class OrdersBean {
      */
     private int workerID;
     /**
-     * ! ! ! А Х Т У Н Г ! ! !
-     * order_date
      * ДАТА ЗАКАЗА
      */
-
+    private Date orderDate;
     /**
      * Сумма заказа
      */
@@ -36,11 +36,13 @@ public class OrdersBean {
         this.workerID = workerID;
     }
 
-    /**
-     * ! ! ! А Х Т У Н Г ! ! !
-     * order_date
-     * ДАТА ЗАКАЗА
-     */
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
+    }
 
     public short getCostNumeric() {
         return costNumeric;

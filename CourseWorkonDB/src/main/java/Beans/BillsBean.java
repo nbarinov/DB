@@ -7,10 +7,7 @@ public class BillsBean {
      * Номер билета
      */
     private int billID;
-
     /**
-     * ! ! ! А Х Т У Н Г ! ! !
-     * purchase_date
      * ДАТА ПОКУПКИ
      */
     private Date purchaseDate;

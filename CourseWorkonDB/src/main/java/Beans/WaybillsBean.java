@@ -1,5 +1,8 @@
 package Beans;
 
+import java.sql.Date;
+import java.time.LocalTime;
+
 public class WaybillsBean {
     /**
      * ID путевого листа
@@ -21,15 +24,18 @@ public class WaybillsBean {
      * ID автобуса
      */
     private int busID;
-
     /**
-     * ! ! ! А Х Т У Н Г ! ! !
-     *  ТУТ НАДО:
-     *  ВРЕМЯ ОТБЫТИЯ
-     *  ВРЕМЯ ПРИБЫТИЯ
-     *  ДАТА ПРОХОЖДЕНИЯ МЕД ОСМОТРА
+     * Время отбытия
      */
-
+    private LocalTime departureTime;
+    /**
+     * Время прибытия
+     */
+    private LocalTime arrivalTime;
+    /**
+     * Дата мед осмотра
+     */
+    private Date medView;
     /**
      * Количество выделенного топлива
      */
@@ -65,6 +71,30 @@ public class WaybillsBean {
 
     public void setWorkerID(int workerID) {
         this.workerID = workerID;
+    }
+
+    public LocalTime getDepartureTime() {
+        return departureTime;
+    }
+
+    public void setDepartureTime(LocalTime departureTime) {
+        this.departureTime = departureTime;
+    }
+
+    public LocalTime getArrivalTime() {
+        return arrivalTime;
+    }
+
+    public void setArrivalTime(LocalTime arrivalTime) {
+        this.arrivalTime = arrivalTime;
+    }
+
+    public Date getMedView() {
+        return medView;
+    }
+
+    public void setMedView(Date medView) {
+        this.medView = medView;
     }
 
     public int getBusID() {

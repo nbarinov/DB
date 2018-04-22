@@ -1,15 +1,16 @@
 package Beans;
 
+import java.sql.Date;
+
 public class BreakagesBean {
     /**
      * ID поломки
      */
     private int breakageID;
     /**
-     * ! ! ! А Х Т У Н Г ! ! !
-     * ЗДЕСЬ ДОЛЖЕН БЫТЬ break_date
+     * Дата поломки
      */
-
+    private Date breakDate;
     /**
      * Тип поломки
      */
@@ -27,10 +28,13 @@ public class BreakagesBean {
         this.breakageID = breakageID;
     }
 
-    /**
-     * ! ! ! А Х Т У Н Г ! ! !
-     * ЗДЕСЬ ДОЛЖЕН БЫТЬ break_date
-     */
+    public Date getBreakDate() {
+        return breakDate;
+    }
+
+    public void setBreakDate(Date breakDate) {
+        this.breakDate = breakDate;
+    }
 
     public String getBreakType() {
         return breakType;
