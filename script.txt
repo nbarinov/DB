@@ -1,0 +1,159 @@
+CREATE TABLE timetables(
+  timetable_id SERIAL PRIMARY KEY NOT NULL,
+  route_id int NOT NULL,
+  departure time,
+  arrival time,
+  travell_time interval,
+  period VARCHAR(10)
+);
+
+CREATE TABLE bus_journeys(
+  journey_id SERIAL PRIMARY KEY NOT NULL,
+  timetable_id smallint NOT NULL,
+  waybill_id smallint,
+  bus_id smallint,
+  platform_number smallint
+);
+
+CREATE TABLE waybills(
+  waybill_id SERIAL PRIMARY KEY NOT NULL,
+  autocompany_id smallint,
+  route_id smallint,
+  worker_id smallint,
+  bus_id smallint,
+  departure_time time,
+  arrival_time time,
+  med_view date,
+  fuel_amount smallint
+);
+
+
+CREATE TABLE autocompanies(
+  autocompany_id SERIAL PRIMARY KEY NOT NULL,
+  title VARCHAR(50),
+  contact_number smallint,
+  phone_number VARCHAR(20)
+);
+
+CREATE TABLE workers(
+  worker_id SERIAL PRIMARY KEY NOT NULL,
+  surname varchar(30),
+  name varchar(30),
+  fathername varchar(30),
+  postition varchar(30),
+  experience smallint,
+  city varchar(30),
+  street varchar(30),
+  room_number smallint,
+  phone_number varchar(20)
+);
+
+CREATE TABLE buses(
+  bus_id SERIAL PRIMARY KEY NOT NULL,
+  state_number VARCHAR(20),
+  run smallint,
+  tec_service date,
+  mark_id smallint,
+  autocompany_id smallint
+);
+
+CREATE TABLE breakages(
+  breakage_id SERIAL PRIMARY KEY NOT NULL,
+  break_date date,
+  break_type VARCHAR(30),
+  bus_id smallint,
+);
+
+CREATE TABLE repais(
+  repair_id SERIAL PRIMARY KEY NOT NULL,
+  breakage_id smallint,
+  start_date date,
+  end_date date,
+  rep_name varchar(20),
+  rep_surname varchar(20),
+  rep_fname varchar(20),
+  rep_cost smallint
+);
+
+CREATE TABLE bus_marks(
+  mark_id SERIAL PRIMARY KEY NOT NULL,
+  fabricator VARCHAR(20),
+  num_floors smallint,
+  seats_number smallint,
+  fuel_id smallint,
+  oil_id smallint
+);
+
+CREATE table oils(
+  oil_id SERIAL PRIMARY KEY NOT NULL,
+  oil_mark VARCHAR(20),
+  season varchar(10)
+);
+
+CREATE TABLE fuel(
+  fuel_id SERIAL PRIMARY KEY NOT NULL,
+  fuel_mark VARCHAR(20),
+  season varchar(10)
+);
+
+CREATE TABLE orders(
+  order_id SERIAL PRIMARY KEY NOT NULL,
+  worker_id smallint,
+  order_date date,
+  cost numeric(7,2)
+);
+
+CREATE TABLE bills(
+  bill_id SERIAL PRIMARY KEY NOT NULL,
+  purchase_date date,
+  cost numeric(7,2),
+  order_id smallint
+);
+
+CREATE TABLE routes(
+  route_id SERIAL PRIMARY KEY NOT NULL,
+  dep_point smallint,
+  arr_point smallint,
+  extension smallint
+);
+
+CREATE TABLE routes_haltes(
+  route_id smallint,
+  halt_id smallint
+);
+
+CREATE TABLE haltes(
+  halt_id SERIAL PRIMARY KEY NOT NULL,
+  halt_name VARCHAR(15)
+);
+
+CREATE TABLE stations(
+  station_id SERIAL PRIMARY KEY NOT NULL,
+  city varchar(20),
+  street varchar(20),
+  phone_numer varchar(20)
+);
+
+ALTER TABLE timetables ADD CONSTRAINT timetables_fk0 FOREIGN KEY(route_id) references routes(route_id) ON DELETE CASCADE;
+ALTER TABLE routes_haltes ADD CONSTRAINT routes_haltes_fk0 FOREIGN KEY(route_id) references routes(route_id);
+ALTER TABLE routes_haltes ADD CONSTRAINT routes_haltes_fk1 FOREIGN KEY(halt_id) REFERENCES haltes(halt_id);
+ALTER TABLE routes ADD CONSTRAINT routes_fk1 FOREIGN KEY(arr_point) REFERENCES stations(station_id) ON DELETE CASCADE;
+ALTER TABLE routes ADD CONSTRAINT routes_fk0 FOREIGN KEY(dep_point) REFERENCES stations(station_id) ON DELETE CASCADE;
+ALTER TABLE waybills ADD CONSTRAINT waybills_fk0 FOREIGN KEY(autocompany_id) REFERENCES autocompanies(autocompany_id);
+ALTER TABLE waybills ADD CONSTRAINT waybills_fk1 FOREIGN KEY(route_id) REFERENCES routes(route_id);
+ALTER TABLE waybills ADD CONSTRAINT waybills_fk2 FOREIGN KEY(worker_id) REFERENCES workers(worker_id);
+ALTER TABLE waybills ADD CONSTRAINT waybills_fk3 FOREIGN KEY(bus_id) REFERENCES buses(bus_id);
+ALTER TABLE bus_journeys ADD CONSTRAINT bus_journeys_fk0 FOREIGN KEY(timetable_id) REFERENCES timetables(timetable_id) ON DELETE CASCADE;
+ALTER TABLE bus_journeys ADD CONSTRAINT bus_journeys_fk1 FOREIGN KEY(waybill_id) REFERENCES waybills(waybill_id);
+ALTER TABLE bus_journeys ADD CONSTRAINT bus_journeys_fk2 FOREIGN KEY(bus_id) REFERENCES buses(bus_id);
+ALTER TABLE buses ADD CONSTRAINT bus_fk0 FOREIGN KEY(autocompany_id) references autocompanies(autocompany_id) ON DELETE CASCADE;
+ALTER TABLE buses ADD CONSTRAINT bus_fk1 FOREIGN KEY(mark_id) REFERENCES bus_marks(mark_id);
+ALTER TABLE buses ADD CONSTRAINT bus_fk2 FOREIGN KEY(worker_id) REFERENCES workers(worker_id);
+ALTER TABLE breakages ADD CONSTRAINT breakages_fk0 FOREIGN KEY(bus_id) REFERENCES buses(bus_id) ON DELETE CASCADE;
+ALTER TABLE repais ADD CONSTRAINT repais_fk0 FOREIGN KEY(breakage_id) REFERENCES breakages(breakage_id) ON DELETE CASCADE;
+ALTER TABLE bus_marks ADD CONSTRAINT bus_marks_fk0 FOREIGN KEY(oil_id) REFERENCES oils(oil_id);
+ALTER TABLE bus_marks ADD CONSTRAINT bus_marks_fk1 FOREIGN KEY(fuel_id) REFERENCES fuel(fuel_id);
+ALTER TABLE orders ADD CONSTRAINT order_fk0 FOREIGN KEY(worker_id) REFERENCES workers(worker_id);
+ALTER TABLE bills ADD CONSTRAINT bills_fk0 FOREIGN KEY(order_id) REFERENCES orders(order_id);
+
+
