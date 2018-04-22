@@ -49,3 +49,10 @@ table{
     border-spacing: 0;
 }
 
+.example{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+
