@@ -1,0 +1,51 @@
+.container {
+    padding: 0 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+nav {
+    overflow: hidden;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+nav li {
+    display: inline-block;
+    margin-left: 25px;
+    height: 70px;
+    line-height: 70px;
+    transition: .5s linear;
+}
+nav a {
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+nav a:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    background: #868686;
+    transition: width .5s linear;
+}
+nav a:hover:after {width: 100%;}
+
+table{
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    border-spacing: 0;
+}
+
